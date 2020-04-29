@@ -1,11 +1,11 @@
 
-# Validador de CPF :computer: 
+# CPF Validator :computer: 
 
-Projeto para validar o CPF digitado num página web
+Project for a validator of CPF typed on a web page.
 
 ## Motivation
 
-Desafio lançado no programa Hiring Coders na Gama Academy que consiste construção de uma página web onde o usuário informa o número de um CPF e o sistema faz a validação se o mesmo é válido.
+Challenge launched in the Hiring Coders project at Gama Academy which consists of building a web page where the user informs the number of a CPF and the system validates if it is valid or not.
 
 ## Prerequisites for the project
 
@@ -20,7 +20,7 @@ Desafio lançado no programa Hiring Coders na Gama Academy que consiste constru�
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the [MIT License](LICENSE.md).
 
 ## Credits
 
