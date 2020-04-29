@@ -5,62 +5,103 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Página Web que realiza a válidação de CPF é válido ou não, desenvolvido por Luiz Santos, para desafio da Gama Academy">
+    <meta name="keywords" content="cpf, html, css, JavaScript, Gama Academy, desafio, site" />
+    <meta name="robots" content="index, follow">
 
     <title>Validador de CPF - JavaScript</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./src/style.css">
 
 
 </head>
 
 <body>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="page-header">Validador de CPF</h1>
-            <p>Através deste simples algoritmo, veremos diversos recursos e habilidades da linguagem Javascript</p>
+
+    <div class="container">
+        <div class="card border-0 rounded shadow my-5 transparencia ">
+            <div class="card-body p-5">
+                <div class="container">
+                    <h1 class="display-4">Validador de CPF</h1>
+                    <p class="lead">Através deste algoritmo de validação de CPF, desenvolvemos diversos recursos e
+                        habilidades da linguagem Javascript</p>
+                </div>
+
+
+                <!-- Input Form message -->
+                <div class=" mx-auto mt-5" style="width: 400px;">
+
+                    <form class="form-inline">
+                        <div class="form-row container mx-auto ">
+
+                            <div class="col-auto mx-auto ">
+
+                                <div class="input-group mt-2 mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">CPF</div>
+                                    </div>
+                                    <input type="text" class="form-control" maxlength="11" autocomplete="off"
+                                        placeholder="Digite somente números" id="cpf_digitado" >
+                                </div>
+                            </div>
+
+                            <div class="col-auto mx-auto ">
+                                <button type="button" class="btn btn-info mt-2 mb-2"
+                                    onclick="validacao()">Validar</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                    <!-- Validation message -->
+                    <div class="container page-header  mx-auto mt-4 mb-4"  style="height: 100px">
+                        <div id="success" class="alert alert-success" style="display: none;" role="alert">
+                            <h4 class="alert-heading">Oba!</h4>
+                            <p>Esse CPF é válido.</p>
+                        </div>
+                        <div id="error" class="alert alert-danger" style="display: none;" role="alert">
+                            <h4 class="alert-heading">Que pena!</h4>
+                            <p>Esse CPF é não válido.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        
         </div>
+        <footer class="site-footer">
+            <p class="text-center text-white">Desenvolvido por André Terrasan </p>
+          </footer>
 
     </div>
-    <div class="container formulario col-sm-4">
-        <form>
-            <div class="form-group">
-                <div class="input-group input-group-lg">
-                    <span class="input-group-addon" id="sizing-addon1">CPF</span>
-                    <input type="text" class="form-control" placeholder="Digite apenas os números para validação ..."
-                        aria-describedby="sizing-addon1" id="cpf_digitado">
-                </div>
-                <small class="form-text text-muted">Digite somente numeros</small>
-            </div>
-            <button type="button" class="btn btn-info" onclick="validacao()">Validar !</button>
-        </form>
-    </div>
-    <div class="container page-header">
-        <div id="success" class="alert alert-success" style="display: none;" role="alert">
-            <strong>Oba!</strong> Seu CPF é válido
-        </div>
-        <div id="error" class="alert alert-danger" style="display: none;" role="alert">
-            <strong>Ops!</strong> Seu CPF não é válido
-        </div>
-    </div>
+
+
+
+
+
+
 
 </body>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"></script>
+<!-- Necessary for Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
 <!-- script JS -->
-<script src="./script.js"></script>
+<script src="./src/script.js"></script>
 
 </html>

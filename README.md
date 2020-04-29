@@ -12,7 +12,7 @@ Challenge launched in the Hiring Coders project at Gama Academy which consists o
 - HTML5;
 - CSS;
 - JAVASCRIPT;
-- BOOTSTRAP;
+- BOOTSTRAP 4;
 
 ## Author
 
