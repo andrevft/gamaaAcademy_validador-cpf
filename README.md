@@ -1,7 +1,7 @@
 
 # CPF Validator :computer: 
 
-Project for a validator of CPF typed on a web page.
+Project for a validator of any CPF (Individual Taxpayer Registration) typed on a web page.
 
 ## Motivation
 
